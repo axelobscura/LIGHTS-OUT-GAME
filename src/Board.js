@@ -100,7 +100,12 @@ class Board extends Component {
 
   render() {
     if(this.state.hasWon){
-      return <h1>YOU WON!!!</h1>
+      return (
+        <div class="container">
+          <div class="neon">YOU </div>
+          <div class="flux">WIN!!! </div>
+        </div>
+      )
     }
     // if the game is won, just show a winning msg & render nothing else
 
@@ -126,11 +131,18 @@ class Board extends Component {
     }
     console.log(tlbBoard);
     return(
+      <div>
+        <div class="container">
+          <div class="neon">Lights </div>
+          <div class="flux">Out </div>
+        </div>
         <table className="Board">
           <tbody>
             {tlbBoard}
           </tbody>
         </table>
+      </div>
+        
     )
   }
 }
